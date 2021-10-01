@@ -23,8 +23,10 @@ body {
 }
 
 p {
-  color:rgb(18, 16, 138);
-  text-align: center; 
+  color:maroon;
+  text-align: center;
+  font-size: xx-large; 
+  font-family: cursive;
 }
 
 h5 {
