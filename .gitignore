@@ -2,7 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
-winequalityN.csv
+
 # C extensions
 *.so
 energy_dataset.csv
