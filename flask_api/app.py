@@ -26,7 +26,7 @@ def wine_recommendation(selections):
 
     # Find new wine for recommendation
     # df = pd.read_csv('../Resources/wine_clean_clustered.csv')
-    df = pd.read_sql(f"select * from wine_df",connection)
+    df = pd.read_sql(f"select name from wine_df order by random() limit 1",connection)
     df = df[df['class'] == selected_class]
     df = df.sample(n=1)
     recommended_wine = str(df['name'].values[0])
