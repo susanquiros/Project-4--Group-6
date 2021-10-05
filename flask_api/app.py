@@ -3,14 +3,11 @@ import pandas as pd
 # from flask_restful import Api, Resource, reqparse
 from flask_cors import CORS
 # from sklearn.externals import joblib
-import sqlalchemy
+import sqlite3
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session 
 from sqlalchemy import create_engine, func
 from flask import Flask, jsonify, render_template
-
-engine = create_engine('postgresql://postgres:postgres@localhost:5432/wine_db')
-connection = engine.connect()
 
 app = Flask(__name__)
 CORS(app)
@@ -18,7 +15,9 @@ CORS(app)
 
 @app.route("/api/winedata/<selections>")
 def wine_recommendation(selections):
-
+    
+    connection = sqlite3.connect('wine_database') 
+    # connection.close()
     # Parse user selections from front end and find favored wine class
     selections_int = selections.split(",")
     selections_int = [int(selection) for selection in selections_int]
@@ -26,14 +25,17 @@ def wine_recommendation(selections):
 
     # Find new wine for recommendation
     # df = pd.read_csv('../Resources/wine_clean_clustered.csv')
-    df = pd.read_sql(f"select name from wine_df where class = {selected_class} order by random() limit 1 ",connection)
+    df = pd.read_sql(f"select name from wine_dataframe where class = {selected_class} order by random() limit 1 ",connection)
+    df2 = pd.read_sql(f"select name from wine_dataframe where class = {selected_class} order by random() limit 1 ",connection)
     # df = df[df['class'] == selected_class]
     # df = df.sample(n=1)
     recommended_wine = str(df['name'].values[0])
-
+    recommended_wine2 = str(df2['name'].values[0])
+    connection.close()
     # Return new wine recommendation
     # return(recommended_wine)
-    return jsonify({'recommended_wine':recommended_wine})
+    return jsonify({'Recommended 1':recommended_wine,
+    'Recommended 2': recommended_wine2})
 
 
 

@@ -25,30 +25,15 @@
       <div class="col-md-12 jumbotron text-center border">
         <h1> The Better Taste </h1>
         <p>Life is too short for a bad wine... </p>
-        <div style="margin: 150px; height: 100%"><img       
-        </div>
+        <div style="margin: 150px; height: 100%"><img </div>
 
-        <br><br>
-
-        <div class="row justify-content-around">
-          <div class="col-md-4">
-            <div class="well">
-              <h5>Select XXX:</h5>
-              <select id="selDataset1">
-                <option value=1>Wine 1</option>
-                <option value=2>Wine 2</option>
-                <option value=3>Wine 3</option>
-                <option value=4>Wine 4</option>
-                <option value=5>Wine 5</option>
-              </select>
-            </div>
-          </div>
+          <br><br>
 
           <div class="row justify-content-around">
             <div class="col-md-4">
               <div class="well">
                 <h5>Select XXX:</h5>
-                <select id="selDataset2">
+                <select id="selDataset1">
                   <option value=1>Wine 1</option>
                   <option value=2>Wine 2</option>
                   <option value=3>Wine 3</option>
@@ -62,7 +47,7 @@
               <div class="col-md-4">
                 <div class="well">
                   <h5>Select XXX:</h5>
-                  <select id="selDataset3">
+                  <select id="selDataset2">
                     <option value=1>Wine 1</option>
                     <option value=2>Wine 2</option>
                     <option value=3>Wine 3</option>
@@ -70,40 +55,49 @@
                     <option value=5>Wine 5</option>
                   </select>
                 </div>
-              </div>       
+              </div>
 
-          
-          <div class="row text-center">
-            <button id="clickMe" class="btn btn-large btn-primary">
-              Prediction
-            </button>
+              <div class="row justify-content-around">
+                <div class="col-md-4">
+                  <div class="well">
+                    <h5>Select XXX:</h5>
+                    <select id="selDataset3">
+                      <option value=1>Wine 1</option>
+                      <option value=2>Wine 2</option>
+                      <option value=3>Wine 3</option>
+                      <option value=4>Wine 4</option>
+                      <option value=5>Wine 5</option>
+                    </select>
+                  </div>
+                </div>
+                <p> <br> </br></p>
+                <p><br> </br></p>
+                <p><br> </br></p>
+
+                <div class="row text-center">
+                  <button id="clickMe" class="btn btn-large btn-primary">
+                    Prediction
+                  </button>
+                  <p><br> </br></p>
+
+                  <h3 id="prediction"> Base on your selections you would like...</h3>
+                    console.log = {data};
+                    
+                </div>
+                
+
+              </div>
+            </div>
           </div>
 
+          <br><br>
 
         </div>
-      </div>
-    </div>
 
-    <br>
-
-    <div class="row">
-      <div class="col-md-6">
-        <div id="bar"></div>
-      </div>
-
-      <div class="col-md-6">
-        <div id="map"></div>
-      </div>
-    </div>
-
-    <br><br>
-
-  </div>
-
-  <!-- D3 JavaScript -->
-  <script src="https://d3js.org/d3.v5.min.js"></script>
-  <!-- Our JavaScript -->
-  <script type="text/javascript" src="static/js/new_logic.js"></script>
+        <!-- D3 JavaScript -->
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <!-- Our JavaScript -->
+        <script type="text/javascript" src="static/js/new_logic.js"></script>
 
 
 </body>
