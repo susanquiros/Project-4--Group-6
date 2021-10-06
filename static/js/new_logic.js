@@ -5,8 +5,11 @@ d3.select("#clickMe").on("click", function (e) {
   console.log(sel1,sel2,sel3)
   console.log(`/api/winedata/${sel1},${sel2},${sel3}`)
   d3.json(`http://127.0.0.1:5000/api/winedata/${sel1},${sel2},${sel3}`).then(function (data) {
-    d3.select("result").html(data);
-      // console.log(data);
+    d3.select(".result").text(data['Recommended 1']);
+    d3.select(".result2").text(data['Recommended 2']);
+    
     // d3.select()
   });
+
+  
 });

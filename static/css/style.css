@@ -26,7 +26,7 @@ p {
   color:maroon;
   text-align: center;
   font-size: xx-large; 
-  font-family: cursive;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h5 {
@@ -135,4 +135,18 @@ h5 {
   position: absolute;
   right: 12.5%;
   font-size: 10px;
+}
+
+.result {
+  color:maroon;
+  text-align: center;
+  font-size: xx-large; 
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.result2 {
+  color:maroon;
+  text-align: center;
+  font-size: xx-large; 
+  font-family: Arial, Helvetica, sans-serif;
 }
