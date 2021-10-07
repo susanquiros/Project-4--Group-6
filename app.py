@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 # from flask_restful import Api, Resource, reqparse
-from flask_cors import CORS
+# from flask_cors import CORS
 # from sklearn.externals import joblib
 import sqlite3
 from sqlalchemy.ext.automap import automap_base
@@ -10,7 +10,7 @@ from sqlalchemy import create_engine, func
 from flask import Flask, jsonify, render_template
 
 app = Flask(__name__)
-CORS(app)
+# CORS(app)
 # wine_model = joblib.load('wine.md1')
 
 
@@ -38,9 +38,6 @@ def wine_recommendation(selections):
     # return(recommended_wine)
     return jsonify({'Recommended 1':recommended_wine,
     'Recommended 2': recommended_wine2})
-
-
-
 
 
 # class Predict(Resource):
