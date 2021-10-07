@@ -1,8 +1,5 @@
 import numpy as np
 import pandas as pd
-# from flask_restful import Api, Resource, reqparse
-# from flask_cors import CORS
-# from sklearn.externals import joblib
 import sqlite3
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session 
@@ -10,10 +7,6 @@ from sqlalchemy import create_engine, func
 from flask import Flask, jsonify, render_template
 
 app = Flask(__name__)
-# CORS(app)
-# wine_model = joblib.load('wine.md1')
-
-
 
 @app.route("/api/winedata/<selections>")
 def wine_recommendation(selections):
@@ -39,36 +32,10 @@ def wine_recommendation(selections):
     return jsonify({'Recommended 1':recommended_wine,
     'Recommended 2': recommended_wine2})
 
-
-# class Predict(Resource):
-
-#     @statitcmethod
-#     def post():
-#         parser = reqparse.RequestParser()
-#         parser.add_argument('')
-#         parser.add_argument('')
-#         parser.add_argument('')
-
-#         args = parser.parse_args() 
-
-#        wine_predicted = np.fromiter(args.values(), dtype=float)  # convert input to array
-
-#         out = {'Prediction': wine_model.predict([wine_predicted])[0]}
-
-#          return out, 200
-
-# api.add_resource(Predict, '/')
-
-
 @app.route("/")
 def home_page():
     """List all available api routes."""
     return render_template('index.html') 
-
-#     response = jsonify(all_summary_view_list)
-#     response.headers.add('Access-Control-Allow-Origin', '*')
-#     return response
-
 
 if __name__ == '__main__':
     app.run(debug=True)
