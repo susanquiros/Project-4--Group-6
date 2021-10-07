@@ -12,6 +12,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://www.wpromotions.eu/confetti.min.js"></script>
+  <script>confetti.start()</script>
+  
 
 
   <!-- Our CSS -->
@@ -27,20 +30,22 @@
       <div class="col-md-12 jumbotron text-center border">
         <h1> The Better Taste </h1>
         <p>Life is too short for a bad wine... </p>
-        <div style="margin: 150px; height: 100%"><img </div>
+        <div style="margin: 10px; height: 100%"><img> </div>
 
-          <br><br>
-
+          <IMG SRC="https://media4.giphy.com/media/btZEAKlDWnBcY/giphy.gif?cid=ecf05e47womq8x5rk7zd0yt8bllv5k0hoym6vdwgvsyjhzy7&rid=giphy.gif&ct=g">
+            <br>
+            <div style="margin: 10px; height: 100%"><img> </div>
           <div class="row justify-content-around">
             <div class="col-md-4">
               <div class="well">
-                <h5>Select Wine 1:</h5>
+                <h5>Select Sweetness: 1(Dry) to 5(Sweet)-</h5>
                 <select id="selDataset1">
-                  <option value=1>Wine 1</option>
-                  <option value=2>Wine 2</option>
-                  <option value=3>Wine 3</option>
-                  <option value=4>Wine 4</option>
-                  <option value=5>Wine 5</option>
+                  <option value=1>1 (Dry)</option>
+                  <option value=5>2</option>        
+                  <option value=3>3</option>
+                  <option value=4>4</option>
+                  <option value=2>5 (Sweet)</option>
+                 
                 </select>
               </div>
             </div>
@@ -48,13 +53,13 @@
             <div class="row justify-content-around">
               <div class="col-md-4">
                 <div class="well">
-                  <h5>Select Wine 2:</h5>
+                  <h5>Select Acidity: 1(Low) to 5(High)</h5>
                   <select id="selDataset2">
-                    <option value=1>Wine 1</option>
-                    <option value=2>Wine 2</option>
-                    <option value=3>Wine 3</option>
-                    <option value=4>Wine 4</option>
-                    <option value=5>Wine 5</option>
+                    <option value=3>1 (Low)</option>
+                    <option value=4>2</option>
+                    <option value=2>3</option>                                       
+                    <option value=5>4</option>
+                    <option value=1>5 (High)</option>
                   </select>
                 </div>
               </div>
@@ -62,13 +67,13 @@
               <div class="row justify-content-around">
                 <div class="col-md-4">
                   <div class="well">
-                    <h5>Select Wine 3:</h5>
+                    <h5>Select Alcohol Content: 1 (Low) to 5 (High!)</h5>
                     <select id="selDataset3">
-                      <option value=1>Wine 1</option>
-                      <option value=2>Wine 2</option>
-                      <option value=3>Wine 3</option>
-                      <option value=4>Wine 4</option>
-                      <option value=5>Wine 5</option>
+                      <option value=2>1 (Low)</option>
+                      <option value=4>2</option>
+                      <option value=1>3</option>                      
+                      <option value=3>4</option>                      
+                      <option value=5>5 (High)</option>
                     </select>
                   </div>
                 </div>
@@ -78,12 +83,13 @@
 
                 <div class="row text-center">
                   <button id="clickMe" class="btn btn-large btn-primary">
-                    Prediction
+                    Let's Drink! 
                   </button>
+                  <div id="tsparticles"></div>
 
                   <p><br> </br></p>
 
-                  <h3 id="prediction"> Base on your selections you would like...</h3>
+                  <h3 id="prediction"> Based on your selections you would like:</h3>
                   <div class="result">Wine Recommendation 1</div>
                   <div class="result2">Wine Recommendation 2</div>  
                 </div>
