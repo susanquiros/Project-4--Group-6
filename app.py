@@ -13,10 +13,12 @@ app = Flask(__name__)
 CORS(app)
 # wine_model = joblib.load('wine.md1')
 
+
+
 @app.route("/api/winedata/<selections>")
 def wine_recommendation(selections):
     
-    connection = sqlite3.connect('wine_database') 
+    connection = sqlite3.connect('flask_api/wine_database') 
     # connection.close()
     # Parse user selections from front end and find favored wine class
     selections_int = selections.split(",")
@@ -61,10 +63,10 @@ def wine_recommendation(selections):
 # api.add_resource(Predict, '/')
 
 
-# @app.route("/")
-# def home_page():
-#     """List all available api routes."""
-#     return render_template('index.html', data=wine_model) #data = to put my prediction to pass a python variable 
+@app.route("/")
+def home_page():
+    """List all available api routes."""
+    return render_template('index.html') 
 
 #     response = jsonify(all_summary_view_list)
 #     response.headers.add('Access-Control-Allow-Origin', '*')

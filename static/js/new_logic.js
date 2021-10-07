@@ -13,9 +13,9 @@ d3.select("#clickMe").on("click", function (e) {
   });
 
   
-});
+// });
 
-btnParty.addEventListener("click", () => {
+// d3.select("#clickMe").on("click", () => {
   confetti("tsparticles", {
     angle: 90,
     count: 25,
@@ -31,5 +31,5 @@ btnParty.addEventListener("click", () => {
     scalar: 1,
     zIndex: 2000,
     disableForReducedMotion: true
-  });
+    });
 });
